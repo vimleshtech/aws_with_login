@@ -1,0 +1,86 @@
+Today's Topics
+====================================
+-Git Setup 			
+-Share the file with git and work with distributed environment
+-Git Life Cycle
+-SDLC 
+
+Git Setup 	
+============================
+There are two seperate level of git environemnt:
+-local repository
+	commands:
+		check git version:
+			$git --version 
+		install the git
+			$sudo apt-get install git-core	
+-global/remote/cloud repository
+	signup to github.com:
+		https://github.com
+		
+
+Share the file with git and work with distributed environment
+==============================================================
+-git is version control and distributed repository
+
+local: git
+
+PC1(local data/files/source code/folder)
+PC2(local data/files/source code/folder)
+PC3(local data/files/source code/folder)
+
+remote server: hub
+	https://github.com
+
+	
+Git Life Cycle
+===============================
+-> Local files/folder/documents/source code (local system)
+   or untracked files 
+
+-> git init (create local reporitory)
+	$git init
+-> add (local files and folder) to stage (for tracking)
+	$git add -A 		(add all files/folder to stage)
+	or
+	$git add filename.ext	(add particular file to stage)
+
+	--unstage / remove from tracking
+	$git rm --cacached filename.extn
+	
+-> commit  : add stage copy to local repository
+	$git commit -m "message...."
+
+	Note : if you are tryting commit first time then you need to add user configuraiton 
+	$git config --global user.email "emailid"
+	$git config --global user.name "name"
+
+
+-> see the status
+	$git status
+-> see log
+	$git log
+-> see file diff/modified files
+	$git diff filename.ext
+
+->  push /add local repository to remote server
+	1. create repository on github
+		https://github.com/vimlestech/mylearning
+		mylearning : this is repo name(which is user defind)
+	
+	$git remote add <aliasname> https://github.com/vimlestech/mylearning
+	$git push -u <aliasname> master
+		--here <aliasname> is remote repository
+			and master is local repository 
+			
+	
+			
+			
+
+		
+
+		
+
+
+	
+

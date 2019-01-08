@@ -1,0 +1,144 @@
+Today's Topics
+====================================
+-Linux Faimly 
+-Dir Structure
+-File and Folder Permission
+-Linux Basic Commands 
+-System Update
+-Package Installation/Remove
+-Git Setup 
+-Share the file with git and work with distributed environment
+
+
+Linux Faimly 
+==========================
+-Linux is an Operating System 
+-Linux is Open Source 
+-Types:
+	-Rehl			: Server
+	-CentOS			: Server, and Client	
+	-Ubuntu			: GUI 
+	-Farr...*	
+kernal 
+	3.10 +
+Command:
+	$uname
+	$uname -a 
+
+
+Dir Structure
+=================================
+	/root (~)
+		/etc			: 
+		/var
+		/users			
+		/lib		
+		etc.	
+
+$pwd		: return current path 
+$cd ~		: (change director ) go to root/home
+$cd -		: go back (return)
+$cd dirname 	: change directory 
+$cd ..		: one dir back
+$ll		: show long list
+drwxrwxrwx	created date filesize  location   name 
+-rwxrwxrwx
+
+$ls		: show short list
+	
+File and Folder Permission
+===================================
+drwxrwxrwx			: directory (folder)
+-rwxrwxrwx			: - (file)
+
+
+rwx	: read (r) write (w) execute (x)
+-	:f/d
+rwxrwxrwx
+ u  g  o
+
+u	: user (current user)
+g	: group 
+o	: other 
+
+Octal:
+777		: u+g+o
+7		:
+		4 - read
+		2 - write
+		1 - execute		
+Example:	
+	766
+	700
+	744
+		
+	
+$chmod		: change mode(allow/revoke the permission)
+
+Linux Basic Commands 
+================================	
+$mkdir <dirname>		: make/create new directory
+$cd  <dirname>
+Editor:
+	$cat > <filename.ext>	: create new file
+		content..
+		..
+	ctrl+z			:exit(save) and close the file 
+	
+	$cat <filename.ext>   	: show file content 
+
+	$cat  <filename.ext> >> <new filename.txt> : create the replica of existing file
+	
+
+	$nano <filename.ext>
+		..
+		..
+		..
+	ctrl+X		
+			press y - save
+			press n - cancel
+
+	$geidt <filename.ext>		: gui editor 
+	
+			
+	$vi			:editor ***
+				
+
+Manage the user permission:
+================================
+$chmod  777 file/folder  : all permission
+$chmod  711 file/folder   : user (all permission), group (execute), other(exectue)
+$chmod  g+rw  file/folder  : grant read and write permission to group
+$chmod  g-w  file/folder    : revoke the write permission from group 
+	
+
+
+System Update
+=========================
+$apt-get		: ubuntu 
+$yum			: rehl, centos		
+$rpm 			: is package (.zip / zar file)
+
+
+
+$apt-get	update 
+
+sudo 		: admin 
+
+$apt-get install <packagename>
+$apt-get install git-core		--install git
+$apt-get install jdk-default		--install java
+
+
+
+Create new account on GitHub:
+================================
+https://github.com
+	signup
+
+https://github.com/vimleshtech/linux_with_aws
+
+		
+
+
+	
