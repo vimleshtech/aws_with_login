@@ -1,0 +1,39 @@
+OS Process Mangagement
+============================
+$cal 		--show calendar
+$date		--show current date and time
+$whomi 		--show current login user name
+$users 		--show list of users 
+$passwd		--change user password 
+
+$su <username>	--switch user 
+$logout 	--logout from current user account
+
+VM : Logoff , Suspend , Run in Background 
+-------------------------------------------  
+	Logoff - shutdown 
+	Suspend - hibernate 
+	Run in Background - process will not kill but will be hidden
+	
+$reboot
+$poweroff
+$shutdown 
+
+$chown  user  file/folder 		--tranfer/grant ownership 
+$chodmod 777   file/folder
+$chodmod 716   file/folder
+$chodmod 711   file/folder
+$chodmod 611   file/folder
+
+$chodmod g+rw   file/folder	
+$chodmod o-w  file/folder	
+
+========================================================
+$wc
+$locate 
+
+$ find ./GFG -name sample.txt 
+$ find /home -iname tecmint.txt
+$ find / -type d -name Tecmint
+$ find ./GFG -name *.txt 
+
