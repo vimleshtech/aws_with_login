@@ -1,0 +1,70 @@
+EC2 : Elastic Compute Cloud  
+===================
+	-Intstance (copy of OS)
+	-
+		-Windows
+			RDP : remote desktop 
+		-Linux 
+		
+VPC
+===================
+SECURITY GROUP
+===================
+
+CI - CD
+==================
+CI  - continous integration 
+	- Git  (local repository)
+	- Git Hub (remote sever/cloud server)
+CD - continous deploymentd
+	- Jenkins  (install jenkins)
+		-JDK 
+			-open cmd
+			-run "java -version"
+			
+	-open the jenkins in web browser
+		-localhost:8080
+
+	-copy the initial pwd from 
+		C:\Program Files (x86)\Jenkins\secrets\initialAdminPassword
+	
+	
+	-Install suggested plugins
+
+	-Set/create user id and password
+		uid: techvision
+		pwd: Arun@951
+
+	-Configure the addons 
+		-Go to Manage Jenkins
+		-Then Gloabal Tool configuraiton 	
+		i. Add JDK Path  (jdk should be already installed)
+				1.7+
+		ii. Add git exe file path (git should be already installed)
+				2.2+
+		iii Add Maven path  (3.5+)
+			https://maven.apache.org/download.cgi
+			
+
+	*Add Plugins 
+		-Maven
+		-Git
+		-Pipeline 
+		
+
+	Step:
+		1. Go to Manage Jenkins
+		2. Manage Plugins 
+		2. Then go to Available tab
+
+			-search for "git" and add required library
+			-search for "maven" and add required library
+			-search for "pipeline" and add required library
+			-search for "report" and and required library 
+			
+					
+	
+	
+			
+
+
