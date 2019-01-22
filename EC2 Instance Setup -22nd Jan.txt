@@ -1,0 +1,173 @@
+===============================
+Login to AWS console 
+===============================
+-> Go to services 
+-> EC2
+-> Launch Instance
+-> Select/Choose Instance Type(OS Type/Image Type)
+
+**Select Instance Category (RAM, CPUs)
+				-Free
+				-Paid 
+
+-> Select No. of Instance Configurataion 
+			  
+			  ,VPC(virtual public cloud)
+			  ,Subnet
+			  ,Security Group
+				 Note : keep as it is 
+
+		
+-> Next
+		Volume Size   (example: 30GB winds,Linux 8 GB)
+
+-> Next
+		Add Tag Name 
+			key  : value
+
+-> Security Group 
+		Enable the port no. 
+				SSH  : for linux
+				RDP  : for windows 
+				example:
+					http
+					https
+					mariadb/mysql
+
+-> Create or download existing public key 
+
+-> next and launch inatance 
+
+-> Scroll down and click on view instances 
+
+
+
+================================================
+Connect to EC2 Instance from Local system 
+================================================
+-> Download and install the client (like : Putty)
+	https://www.chiark.greenend.org.uk/~sgtatham/putty/
+
+
+-> you will find Putty,and  Putty KeyGen on local machine when your installation will be completed
+
+
+Step 1:
+	Open PuttyGen
+		
+Step 2:
+	Load the Downloaded Public Key
+
+Step 3:
+	Click on Save Private Key and Save the file on local drive
+
+
+Step 4:
+	Copy Public IP or complete Public DNS(domain name server) from AWS instance
+	
+Step 5:
+	Open Putty
+
+Step 6:
+	Paste copied Public IP or DNS in Host/IP Address
+
+
+Step 7:
+	Go to Data tab in Putty 
+	
+Step 8:
+	Copy user name from AWS instance and pate to user name input box
+	
+
+Step 9:
+	Go to SSH, then click on Auth 
+
+
+Step 10:
+	Browse the Private Key (which has been saved from PuttyGen)
+
+Step 11:  to save the configuration in Putty
+	-Click on Session tab
+	-enter the serverName and  click on save 
+
+==============================================================	
+Configure the Jenkins Server
+==============================================================
+Open in browser : http://localhost:8080
+
+->Then Login 
+-> Go to Manage jenkins 
+-> Go to Global Tool Configuraiton 
+-> Set the path / configure the JDK, Git, and Maven Path 
+		
+
+
+	C:\Program Files\Java\jdk1.8.0_181
+	C:\Program Files\Git\bin\git.exe
+	E:\Sandbox\apache-maven-3.5.4-bin\apache-maven-3.5.4
+
+	
+-> Add Required Plugin 
+	-Go to Manage jenkins
+	-Go to Manage PlugIns 
+	-Then go to Available tab
+	 and filter/search for 
+		-git
+			git pull request
+			git tag
+			git pipeline
+		-maven	
+			maven pipeline
+			maven dependency 
+			maven server
+			
+	
+-> Create New Item 
+   Type of Jobs
+	-> FreeStyle
+	-> Maven  (java)	**
+	-> Pipeline 		**
+				
+		
+-> Pipelne script or Groovey 
+		node{
+
+			 stage('step1'){
+			
+				git 'https://github.com/sebsto/Webapp'
+			 }
+			 stage('step2'){
+				bat 'mvn clean'				 	
+			 }
+			stage('compile code'){
+
+				bat 'mvn compile'
+			}
+			stage('test code'){
+
+				bat 'mvn test'
+			}
+			stage('build the code'){
+
+				bat 'mvn package'
+			}
+		
+		}
+
+
+-> Maven life cycle 
+		-mvn compile
+		-mvn test
+		-mvn package
+		
+
+
+http://localhost:8080/job/myaws-project-setup/
+
+
+
+
+
+
+
+			
