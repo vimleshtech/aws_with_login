@@ -1,0 +1,28 @@
+EBS
+=============================
+Volume Management:
+=============================
+	->Create New Volume
+			
+	->Attach/Deattach Volume
+	Manage Volume
+		->Modify 	
+		->Delete
+		->Take Snapshot and backup 
+
+	->Create new Machine from snapshot
+			
+EC2-Details
+	i-072642c252174413c
+	us-east-2c
+
+			Primary		  :	xvdp
+Addtional volumne for windows  (secondary):
+						xvdf
+
+snap-058c9652e361a9ff1
+		
+
+===========================================
+S3 : Bucket 
+===========================================	
