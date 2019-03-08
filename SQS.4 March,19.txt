@@ -1,0 +1,41 @@
+Types of SQS Services
+====================================================
+1. Standard Queue
+	-Extension is not required (just enter the name)
+
+2. FIFO Queue:
+	First In First Out
+	Job1
+	Job2
+	Job3
+	Job3 -> Job2 -> Job1 
+
+-Extenson of FIFO job/Queue should be
+		.fifo
+	https://sqs.us-east-1.amazonaws.com/434614614371/myjob.fifo
+
+
+Terms:
+=======================
+-Transactions per second (TPS) per
+-FIFO queues support up to 300 messages per second (300 send, receive, or delete operations per second). When you batch 10 messages per operation (maximum), FIFO queues can support up to 3,000 messages per second.
+-API : Application Programing Interface(service based application which can be access over the can internet and communcate with other application)
+
+	Example:
+		Payment Gateway
+		SMS Gateway
+		AWS 		: 
+
+
+
+
+
+
+
+
+
+
+Questions
+Question C1:  WAP to count the number of spaces, tabs and new line characters in a given string.
+Question C2: WAP to input a character and a string. Each occurrence of a character in the string should be converted to opposite case i.e. upper to lower case or vice versa.
+Question C3: WAP to count the number of words and number of characters in a given line of text except the spaces.
