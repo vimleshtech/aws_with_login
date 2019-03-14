@@ -1,0 +1,104 @@
+RDS: Relational Database Management System
+===============================================
+-is also known as RDBMS(relational database management system) or backend  where data can be stored in tabular format
+
+
+There are following types of RDBMS Server type:
+	-MS SQL Server: Microsoft SQL Server
+	-My SQL Server: My SQL Server 
+	-MaridaDB
+	-Oracle   
+	-PostrageSQL 
+	-MongoDB/NoSQL
+	etc.
+
+
+Server Details:
+	host/server name/ip address/ endpoint:
+				
+	user:
+	
+	password:
+
+	database:
+		
+There are following SQL(Structural query language) commands/statements:
+-----------------------------------------------
+show databases;		--show list of existing databases 
+
+
+create database <dbname>;	--create new database 
+
+
+use <dbname>;			--switch database 
+
+
+show tables;			--show list of existing tables 
+
+--create new table
+create table <tblname>(<col1> datatype,<col2> datatype,<col3> datatype);
+
+
+create table employee(eid int, ename varchar(100), email varchar(100),salary int);
+
+
+
+desc <tblame>;   --show tables details..
+
+
+--insert or save row or data 
+insert into employee(eid,ename,email,salary) values(1,'nitin','nitin@gmail.com',1000);
+
+insert into employee(eid,ename,email) values(1,'nitin','nitin@gmail.com');
+
+
+--show or view data
+select * from employee;  -- * : show all columns
+
+select eid,fname from employoee; --show selected columns
+
+
+--filter or search row
+select * from employee where eid  =1;
+
+select * from employee where eid  >1;
+
+
+select * from employee where fname ='nitin';
+
+select * from employee where fname ='nitin' and eid =1;
+
+
+select * from employee where fname like  '%a%'; --a should be in name 
+select * from employee where fname like  'a%'; --start with a
+select * from employee where fname like  '%a'; --end with a 
+
+
+Note : NULL is default 
+
+--update/modify  data in existing row 
+update employee set salary = 97444 where eid =1;
+
+update employee set salary = 97444 where salary is null;
+
+--delete row
+delete from employee; --delete all row
+delete from employee where eid =1;  --delete selected rows
+
+
+--drop column 
+alter table employee drop column email;
+
+
+--copy data from one table to another table
+insert into newtable select eid,ename from oldtable wehre eid>1;
+
+
+--alter table add new column
+alter table employee add gender varchar(10);
+
+
+
+Install HeidiSQL
+=======================
+
